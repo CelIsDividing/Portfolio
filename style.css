@@ -34,11 +34,15 @@ header {
 }
 
 .header-content {
+  background-image: url(images/text_bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.875rem;
+  gap: 2.5rem;
   padding: 3.125rem;
 }
 
@@ -47,26 +51,26 @@ header {
   background-size: contain;
   background-repeat: no-repeat;
   flex-shrink: 0;
-  height: 1.3125rem;
+  height: 2.625rem;
 }
 
 .home-btn {
-  width: 6.25rem;
+  width: 17.5rem;
   background-image: url('images/btn_home.gif');
 }
 
 .skills-btn {
-  width: 7.5rem;
+  width: 20rem;
   background-image: url('images/btn_skills.gif');
 }
 
 .projects-btn {
-  width: 10.5rem;
+  width: 26rem;
   background-image: url('images/btn_projects.gif');
 }
 
 .contact-btn {
-  width: 10rem;
+  width: 25rem;
   background-image: url('images/btn_contact.gif');
 }
 
@@ -77,20 +81,17 @@ header {
 .contact-btn:hover { background-image: url('images/btn_hover_contact.gif'); }
 
 .content {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  min-width: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  height: 100vh;
 }
 
 .terminal-bg {
   background-size: contain;
-  background-image: url(images/text_bg_new.png);
+  background-image: url(images/text_bg.png);
   background-repeat: no-repeat;
   padding: 50px 540px 140px 100px;
   color: var(--font-color);
