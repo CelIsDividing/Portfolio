@@ -44,6 +44,7 @@ header {
   align-items: center;
   gap: 2.5rem;
   padding: 3.125rem;
+  z-index: 1003;
 }
 
 /* Navigation Button Styles */
@@ -102,4 +103,13 @@ header {
 .title {
   width: 1228px;
   height: auto;
+}
+
+.bottom-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1000;
 }
