@@ -137,19 +137,14 @@ header {
   align-items: center;
   height: 100vh;
   padding-left: 5vw;
-  padding-top: 1vh;
 }
 
 .home-content-inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-
-.home-row-two {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* Same as your terminal width */
+  margin: 20px auto;
+  max-height: 80vh; /* Limit height to 80% of viewport */
 }
 
 .home-text-bg {
