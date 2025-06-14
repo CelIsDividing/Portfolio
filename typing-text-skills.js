@@ -6,12 +6,12 @@ const text = `> cat ./skills.txt
   ├─ OOP (Python, Java)......▓▓▓▓▓▓▓▓░░░ 82%  
   ├─ JavaScript/ES6+.........▓▓▓▓▓▓▓▓▓░░ 90%  
   ├─ HTML5/CSS3..............▓▓▓▓▓▓▓▓▓▓░ 95%  
-  └─ Functional Programming..▓▓▓▓▓░░░░░░ 60%  
+  └─ Functional Programming..▓▓▓▓▓▓▓░░░░ 60%  
 
 [!]DESIGN/ART:  
-  ├─ Pixel Art...............▓▓▓▓▓▓▓▓▓▒ 88%  
+  ├─ Pixel Art...............▓▓▓▓▓▓▓▓▓░ 88%  
   ├─ UI/UX Principles........▓▓▓▓▓▓░░░░ 70%  
-  └─ Animation (CSS/JS)......▓▓▓▓▓▓▓░░░ 75%  
+  └─ Animation (CSS/JS)......▓▓▓▓▓░░░░░ 58%  
 
 [!]SYSTEMS:  
   ├─ Git.....................▓▓▓▓▓▓▓▓░░ 85%  

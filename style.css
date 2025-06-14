@@ -129,7 +129,7 @@ header {
 
 
 
-/* home.css style sheet */
+/* home.css */
 .home-content {
   display: flex;
   flex-direction: row;
@@ -181,4 +181,49 @@ header {
 .banner_left img, .banner_right img {
   height: 100vh;
   width: auto;
+}
+
+
+
+
+/* projects.css */
+
+.projects-text {
+  background-color: rgba(4, 31, 17, 0.627);
+  border: 4px solid #99db48;
+  border-radius: 2px;
+  padding: 50px 100px 70px 100px;
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: 'VT323', monospace;
+  white-space: pre; /* Preserves ASCII art formatting */
+  text-align: center; /* Centers text horizontally */
+  margin: 0 auto; /* Centers the box horizontally */
+  margin-right: 90px;
+  line-height: .8; /* Adjust for better vertical spacing */
+}
+
+.projects-content-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Or your preferred height */
+}
+
+.footer-text {
+  font-size: 2rem;
+  font-weight: 100;
+  color: #1f7b1f;
+}
+
+.footer-link {
+  font-size: 1.75rem;
+  font-weight: 100;
+  text-decoration: none;
+  color: #99db48;
+}
+
+.footer-link:hover {
+  color: white;
+  text-decoration: none;
 }
