@@ -1,44 +1,40 @@
 // typing-animation.js
-const text = `$ nc cellsdividing.net 1337
-Connected to [CellsDividing Terminal v3.1.4]
-User: guest@anonymous
-Access: read-only
-Last login: Thu Jun 13 14:37:42 UTC 2024
+const text = `> cat ./skills.txt  
+[+]SKILLSET: [andrej@cellsdividing:~]  
 
-> system_msg --priority high
-[+]SYSTEM: [Welcome to the deeper layers]
-[+]SYSTEM: [This is where code bends to curiosity]
-[+]SYSTEM: [where ideas compile into reality]
+[!]CORE PROGRAMMING:  
+  ├─ OOP (Python, Java)......▓▓▓▓▓▓▓▓░░░ 82%  
+  ├─ JavaScript/ES6+.........▓▓▓▓▓▓▓▓▓░░ 90%  
+  ├─ HTML5/CSS3..............▓▓▓▓▓▓▓▓▓▓░ 95%  
+  └─ Functional Programming..▓▓▓▓▓░░░░░░ 60%  
 
-> whois andrej
-[+]USER: [andrej]
-[+]TYPE: [Builder/Coder/PixelArtist]
-[+]SPECIALIZATION: [Full-stack reality manipulation]
-[+]MOTIVATION: [challenge=85% fun=10% profit=5% (optional)]
+[!]DESIGN/ART:  
+  ├─ Pixel Art...............▓▓▓▓▓▓▓▓▓▒ 88%  
+  ├─ UI/UX Principles........▓▓▓▓▓▓░░░░ 70%  
+  └─ Animation (CSS/JS)......▓▓▓▓▓▓▓░░░ 75%  
 
-> scan --intent --user=guest
-SCAN RESULTS:
-[ ] Talent scout
-[ ] Collaboration request
-[x] Curious wandering (confidence: 97.3%)
+[!]SYSTEMS:  
+  ├─ Git.....................▓▓▓▓▓▓▓▓░░ 85%  
+  ├─ CLI Wizardry............▓▓▓▓▓▓▓▓▓░ 92%  
+  └─ Browser DevTools........▓▓▓▓▓▓▓▓▓▓ 97%  
 
-> auth --check
-[+]AUTH: [No credentials required]
-[+]AUTH: [Session granted (restricted)]
-[+]SYSTEM: [Glad you found your way here.]
+[+]SPECIALTIES:  
+  │  [Clean code alchemist]
+  │  [Responsive design bending]
+  │  [Pixel-perfect CSS rituals] 
+  │  [Vanilla JS optimization]
+
+[-]WARNING: [Skillset dynamically expanding]  
+[-]ADVISORY: [New abilities compile daily]   
 
 > help --navigation
 [+]DIRECTIVES:
+  ├─ nc cellsdividing.net 1337
   ├─ ls ./projects
-  ├─ cat ./skills.txt
   ├─ ssh collab@cellsdividing.net
   └─ exit (not recommended)
 
-> sysmon --status
-[-]WARNING: [High curiosity levels detected]
-[-]ADVISORY: [Proceed with caution]
-
-root@cellsdividing:~$ █`;
+  root@cellsdividing:~$ █`;
 
 const element = document.getElementById("typing-text");
 let i = 0;
@@ -51,7 +47,7 @@ let charDelay = 3;  // Delay between characters (ms)
 // Define which lines should be links and their URLs
 const linkLines = {
     "ls ./projects": "projects.html",
-    "cat ./skills.txt": "skills.html",
+    "nc cellsdividing.net 1337": "home.html",
     "ssh collab@cellsdividing.net": "contact.html",
     "exit (not recommended)": "index.html"
 };
@@ -72,6 +68,11 @@ function processTextWithLinks(displayedText, includeCursor = true) {
                     `<a href="${linkUrl}" class="terminal-link">${linkText}</a>`);
                 break;
             }
+        }
+        
+        // Add this block to shrink progress bars
+        if (line.includes('▓') || line.includes('▒') || line.includes('░')) {
+            lines[j] = lines[j].replace(/([▓▒░]+)/g, '<span class="progress-bar">$1</span>');
         }
     }
     
@@ -114,6 +115,11 @@ window.onload = function() {
             border-left: 10px solid #38c533;
             margin-left: 2px;
             animation: blink 1s step-end infinite;
+        }
+        .progress-bar {
+            font-size: 0.7em;  /* Adjust this value to make smaller/larger */
+            vertical-align: middle; /* Keeps them aligned with text */
+            letter-spacing: -0.5px; /* Optional: tightens symbol spacing */
         }
         @keyframes blink {
             from, to { opacity: 1 }

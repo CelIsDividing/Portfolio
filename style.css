@@ -21,7 +21,7 @@ body {
 }
 
 p {
-  white-space: nowrap;
+  white-space: pre;
 }
 
 /* Header Styles */
