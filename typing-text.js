@@ -107,7 +107,7 @@ window.onload = function() {
             text-decoration: none;
         }
         .terminal-link:hover {
-            color: #c53833;
+            color: white;
             text-decoration: none;
         }
         .terminal-cursor {
