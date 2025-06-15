@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Contact</title>
+</head>
+<body>
+    <div class="home-content">
+        <div class="banner_left">
+            <img src="images/banner_left.gif" alt="Left banner">
+        </div>
+        
+        <div class="home-content-inner">
+            <div class="home-text-bg">
+                <pre class="terminal-header">
+   _____  ____  _   _ _______ ______  _____ _______<br>   / ____/  __ \| \ | |__   __|  __  |/ ____/__   __|<br>  | |   | |  | |  \| |  | |  | |  | | |       | |  <br>  | |   | |  | | . ` |  | |  | |  | | |       | |  <br>  | |___| |__| | |\  |  | |  | ____ | |____   | |  <br>\_____\_____/|_| \_|  |_|  |_|  |_|\_____\  |_|
+                </pre>
+                
+                <form id="contactForm" class="terminal-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="3357cf90-32b4-4e28-88f7-0e38080e592a">
+                    <div class="form-group">
+                        <label for="name">> NAME:</label>
+                        <input type="text" id="name" name="name" class="terminal-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">> EMAIL:</label>
+                        <input type="email" id="email" name="email" class="terminal-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">> MESSAGE:</label>
+                        <textarea id="message" name="message" class="terminal-textarea" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="terminal-btn">[ SEND ]</button>
+                    <input type="checkbox" name="botcheck" style="display: none;">
+                </form>
+                <br><br><br>
+                <p class="footer-paragraph">Or you can contact me on one of my socials:</p>
+                <div class="social-buttons">
+                    <a href="mailto:kristijanmitrovic12345@gmail.com" class="social-btn email" title="Email"></a>
+                    <a href="https://discord.com/users/858806563468738570" class="social-btn discord" title="Discord" target="_blank"></a>
+                    <a href="www.linkedin.com/in/cells-dividing-93501a36b" class="social-btn linkedin" title="LinkedIn" target="_blank"></a>
+                    <a href="https://github.com/CelIsDividing" class="social-btn github" title="GitHub" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="banner_right">
+            <img src="images/banner_right.gif" alt="Right banner">
+        </div>
+    </div>
+    <script src="sendmail.js"></script>
+</body>
+</html>

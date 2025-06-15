@@ -227,3 +227,132 @@ header {
   color: white;
   text-decoration: none;
 }
+
+
+
+
+/* contact.css */
+
+.terminal-header {
+  font-family: 'VT323', monospace;
+  white-space: pre;       /* Preserves all spaces and line breaks */
+  letter-spacing: 0;      /* No additional spacing between chars */
+  line-height: 0.8;         /* Tight line spacing */
+  font-size: 1.4rem;      /* Slightly larger than body text */
+  display: block;
+  text-align: center;
+  margin: 0.5em 0;
+  color: #38c533;         /* Your green color */
+}
+
+.terminal-form {
+  margin-top: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.terminal-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--font-color);
+}
+
+.terminal-input, .terminal-textarea {
+  background-color: rgba(4, 31, 17, 0.8);
+  border: 2px solid #99db48;
+  color: var(--font-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.terminal-input {
+  height: 2.5rem;
+}
+
+.terminal-textarea {
+  height: 10rem;
+  resize: none;
+}
+
+.terminal-btn {
+  background-color: transparent;
+  border: 2px solid #99db48;
+  color: var(--font-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.terminal-btn:hover {
+  background-color: #99db48;
+  color: var(--bg-color);
+}
+
+.terminal-footer {
+  background-color: var(--bg-color);
+  padding: 1.5rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.social-btn {
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  height: 2.625rem;
+}
+
+.email {
+  width: 48px;
+  background-image: url('images/btn_mail.png');
+}
+
+.discord {
+  width: 48px;
+  background-image: url('images/btn_discord.png');
+}
+
+.linkedin {
+  width: 44px;
+  background-image: url('images/btn_in.png');
+}
+
+.github {
+  width: 48px;
+  background-image: url('images/btn_git.png');
+}
+
+.footer-paragraph {
+  text-align: center;
+  color: #1f7b1f;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+}
+
+.terminal-link {
+  color: #99db48;
+  text-decoration: none;
+}
+
+.terminal-link:hover {
+  color: white;
+  text-decoration: underline;
+}
