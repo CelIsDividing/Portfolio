@@ -494,8 +494,7 @@ header {
   }
 
   .terminal-input { 
-    height: 1rem;
-    font-size: 0.8rem; 
+    height: 2rem;
   }
   .terminal-textarea { 
     height: 5rem; 
