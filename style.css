@@ -493,7 +493,10 @@ header {
     height: 1.5rem;
   }
 
-  .terminal-input { height: 1rem; }
+  .terminal-input { 
+    height: 1rem;
+    font-size: 0.8rem; 
+  }
   .terminal-textarea { 
     height: 5rem; 
     resize: none;
