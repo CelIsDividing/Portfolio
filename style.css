@@ -10,7 +10,7 @@
   /* Responsive variables */
   --header-padding: 1.25rem;
   --content-gap: 5rem;
-  --font-size-mobile: 1.2rem;
+  --font-size-mobile: 1rem;
   --btn-height: 2.625rem;
 }
 
@@ -259,6 +259,10 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
+  min-width: fit-content; /* Prevents stretching */
+  width: auto; /* Allows natural width */
+  white-space: nowrap; /* Prevents text wrapping */
+  display: inline-block; /* Better for button sizing */
 }
 .terminal-btn:hover {
   background-color: var(--border-color);
@@ -362,9 +366,34 @@ header {
     flex-wrap: wrap;
     padding: 0.5rem;
   }
+
+  .home-text-bg {
+    padding: 1rem;
+    margin: 0 1rem; /* Add some side margin on mobile */
+    width: auto;
+    
+    /* Fluid typography */
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+    
+    /* Adjust form elements for mobile */
+    .terminal-input, 
+    .terminal-textarea, 
+    .terminal-btn {
+      font-size: 0.7rem;
+      width: 100%;
+    }
+  }
   
   .content, .home-content {
     padding: 70px 15px;
+  }
+
+  .content {
+    margin-top: -80px;
+  }
+
+  .home-content-inner {
+    margin-top: -50px; /* or whatever value you prefer */
   }
   
   .home-content {
@@ -405,10 +434,13 @@ header {
   }
 
   .terminal-header {
-    font-size: 10px;
+    font-size: 0.7rem;
+    font-weight: bolder;
     white-space: pre-wrap;
-    word-wrap: break-word;
+    overflow-x: hidden;
   }
+
+  .terminal-input { height: 2rem; }
 }
 
 @media (max-width: 480px) {
@@ -420,7 +452,27 @@ header {
     padding: 1rem;
     gap: 1rem;
   }
-  
+
+  .content {
+    margin-top: -80px;
+  }
+
+  .home-content-inner {
+    margin-top: -50px;
+  }
+
+  .home-text-bg {
+    padding: 0.75rem;
+    margin: 0 0.5rem;
+    
+    font-size: clamp(0.3rem, 3vw, 0.6rem);
+  }
+
+  .terminal-header {
+    font-size: 0.3rem;
+    font-weight: bolder;
+  }
+
   .projects-text {
     font-size: 1.2rem;
   }
@@ -440,6 +492,16 @@ header {
   .social-btn {
     height: 1.5rem;
   }
+
+  .terminal-input { height: 1rem; }
+  .terminal-textarea { 
+    height: 5rem; 
+    resize: none;
+  }    
+  
+  .terminal-input, .terminal-textarea {
+    border: 1px solid var(--border-color);
+  }     
   
   .email, .discord, .github { width: 30px; }
   .linkedin { width: 28px; }
