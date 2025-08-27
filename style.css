@@ -1,12 +1,12 @@
 :root {
-  --font-color: #38c533;
-  --bg-color: #041f11;
+  --font-color: #ffffff;
+  --bg-color: #000000;
   --font-family: 'VT323', monospace;
   --font-size: 1.625rem;
-  --border-color: #99db48;
+  --border-color: #ffffff;
   --error-color: #ff3333;
-  --footer-text-color: #1f7b1f;
-  
+  --footer-text-color: #979797;
+
   /* Responsive variables */
   --header-padding: 1.25rem;
   --content-gap: 5rem;
@@ -22,7 +22,8 @@
 }
 
 body {
-  background: url(images/terminal_pixel.png) fixed no-repeat 0 0 / cover;
+  /*background: url(images/terminal_pixel.png) fixed no-repeat 0 0 / cover;*/
+  background-color: var(--bg-color);
   font-family: var(--font-family);
   font-size: var(--font-size);
   color: var(--font-color);
@@ -93,7 +94,7 @@ header {
 }
 
 .home-text-bg {
-  background-color: rgba(4, 31, 17, 0.627);
+  background-color: rgba(22, 22, 22, 0.627);
   border: 4px solid var(--border-color);
   border-radius: 2px;
   padding: 2rem;
@@ -111,44 +112,64 @@ header {
   transform: scale(1.05);
 }
 
-.home-btn { 
+.home-btn {
   width: 12rem;
   background-image: url('images/btn_home.gif');
 }
-.home-btn:hover { background-image: url('images/btn_hover_home.gif'); }
+
+.home-btn:hover {
+  background-image: url('images/btn_hover_home.gif');
+}
 
 .skills-btn {
   width: 14rem;
   background-image: url('images/btn_skills.gif');
 }
-.skills-btn:hover { background-image: url('images/btn_hover_skills.gif'); }
+
+.skills-btn:hover {
+  background-image: url('images/btn_hover_skills.gif');
+}
 
 .projects-btn {
   width: 18rem;
   background-image: url('images/btn_projects.gif');
 }
-.projects-btn:hover { background-image: url('images/btn_hover_projects.gif'); }
+
+.projects-btn:hover {
+  background-image: url('images/btn_hover_projects.gif');
+}
 
 .contact-btn {
   width: 16rem;
   background-image: url('images/btn_contact.gif');
 }
-.contact-btn:hover { background-image: url('images/btn_hover_contact.gif'); }
+
+.contact-btn:hover {
+  background-image: url('images/btn_hover_contact.gif');
+}
 
 /* Side Banners */
-.banner_left, .banner_right {
+.banner_left,
+.banner_right {
   position: fixed;
   top: 0;
   height: 100vh;
   width: auto;
-  max-width: 20vw; /* Limits width to 20% of viewport */
+  max-width: 20vw;
+  /* Limits width to 20% of viewport */
   z-index: 1002;
 }
 
-.banner_left { left: 0; }
-.banner_right { right: 0; }
+.banner_left {
+  left: 0;
+}
 
-.banner_left img, .banner_right img {
+.banner_right {
+  right: 0;
+}
+
+.banner_left img,
+.banner_right img {
   height: 100vh;
   width: auto;
   object-fit: contain;
@@ -172,10 +193,13 @@ header {
 
 /* Text Styles */
 .terminal-header {
-  font-family: 'Courier New', monospace; /* Force monospace font */
+  font-family: 'Courier New', monospace;
+  /* Force monospace font */
   white-space: pre;
-  overflow-x: auto; /* Adds horizontal scroll if needed */
-  font-size: 12px; /* Fixed font size */
+  overflow-x: auto;
+  /* Adds horizontal scroll if needed */
+  font-size: 12px;
+  /* Fixed font size */
   line-height: 1.2;
   margin: 0 auto;
   max-width: 100%;
@@ -212,6 +236,7 @@ header {
   color: var(--border-color);
   text-decoration: none;
 }
+
 .footer-link:hover {
   color: white;
   text-decoration: none;
@@ -233,7 +258,8 @@ header {
   margin-bottom: 1rem;
 }
 
-.terminal-input, .terminal-textarea {
+.terminal-input,
+.terminal-textarea {
   background-color: rgba(4, 31, 17, 0.8);
   border: 2px solid var(--border-color);
   color: var(--font-color);
@@ -243,9 +269,12 @@ header {
   width: 100%;
 }
 
-.terminal-input { height: 2.5rem; }
-.terminal-textarea { 
-  height: 10rem; 
+.terminal-input {
+  height: 2.5rem;
+}
+
+.terminal-textarea {
+  height: 10rem;
   resize: none;
 }
 
@@ -259,11 +288,16 @@ header {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 1rem;
-  min-width: fit-content; /* Prevents stretching */
-  width: auto; /* Allows natural width */
-  white-space: nowrap; /* Prevents text wrapping */
-  display: inline-block; /* Better for button sizing */
+  min-width: fit-content;
+  /* Prevents stretching */
+  width: auto;
+  /* Allows natural width */
+  white-space: nowrap;
+  /* Prevents text wrapping */
+  display: inline-block;
+  /* Better for button sizing */
 }
+
 .terminal-btn:hover {
   background-color: var(--border-color);
   color: var(--bg-color);
@@ -293,26 +327,27 @@ header {
   flex-shrink: 0;
   transition: transform 0.3s ease;
 }
+
 .social-btn:hover {
   transform: translateY(-3px);
 }
 
-.email { 
+.email {
   width: 40px;
   background-image: url('images/btn_mail.png');
 }
 
-.discord { 
+.discord {
   width: 40px;
   background-image: url('images/btn_discord.png');
 }
 
-.linkedin { 
+.linkedin {
   width: 36px;
   background-image: url('images/btn_in.png');
 }
 
-.github { 
+.github {
   width: 40px;
   background-image: url('images/btn_git.png');
 }
@@ -327,6 +362,7 @@ header {
   color: var(--border-color);
   text-decoration: none;
 }
+
 .terminal-link:hover {
   color: white;
   text-decoration: underline;
@@ -345,9 +381,9 @@ header {
     padding: 1.5rem;
     font-size: 2rem;
   }
-  
-  .terminal-input, 
-  .terminal-textarea, 
+
+  .terminal-input,
+  .terminal-textarea,
   .terminal-btn {
     font-size: 1.5rem;
   }
@@ -360,7 +396,7 @@ header {
     --content-gap: 2rem;
     --btn-height: 2rem;
   }
-  
+
   header {
     justify-content: center;
     flex-wrap: wrap;
@@ -369,22 +405,24 @@ header {
 
   .home-text-bg {
     padding: 1rem;
-    margin: 0 1rem; /* Add some side margin on mobile */
+    margin: 0 1rem;
+    /* Add some side margin on mobile */
     width: auto;
-    
+
     /* Fluid typography */
     font-size: clamp(0.8rem, 3.5vw, 1rem);
-    
+
     /* Adjust form elements for mobile */
-    .terminal-input, 
-    .terminal-textarea, 
+    .terminal-input,
+    .terminal-textarea,
     .terminal-btn {
       font-size: 0.7rem;
       width: 100%;
     }
   }
-  
-  .content, .home-content {
+
+  .content,
+  .home-content {
     padding: 70px 15px;
   }
 
@@ -393,41 +431,55 @@ header {
   }
 
   .home-content-inner {
-    margin-top: -50px; /* or whatever value you prefer */
+    margin-top: -50px;
+    /* or whatever value you prefer */
   }
-  
+
   .home-content {
     height: auto;
     min-height: 100vh;
   }
-  
-  .banner_left, .banner_right {
+
+  .banner_left,
+  .banner_right {
     display: none;
   }
-  
-  .terminal-bg, .home-text-bg {
+
+  .terminal-bg,
+  .home-text-bg {
     padding: 1.5rem;
   }
-  
+
   .projects-text {
     font-size: 1.5rem;
     padding: 1rem;
   }
-  
+
   .nav-btn {
     height: 1.8rem;
     margin: 0.25rem;
   }
-  
-  .home-btn { width: 10rem; }
-  .skills-btn { width: 12rem; }
-  .projects-btn { width: 14rem; }
-  .contact-btn { width: 12rem; }
-  
+
+  .home-btn {
+    width: 10rem;
+  }
+
+  .skills-btn {
+    width: 12rem;
+  }
+
+  .projects-btn {
+    width: 14rem;
+  }
+
+  .contact-btn {
+    width: 12rem;
+  }
+
   .terminal-footer {
     position: relative;
   }
-  
+
   .title {
     max-width: 90vw;
     width: auto;
@@ -440,14 +492,16 @@ header {
     overflow-x: hidden;
   }
 
-  .terminal-input { height: 2rem; }
+  .terminal-input {
+    height: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
   :root {
     --font-size: 1rem;
   }
-  
+
   .header-content {
     padding: 1rem;
     gap: 1rem;
@@ -464,7 +518,7 @@ header {
   .home-text-bg {
     padding: 0.75rem;
     margin: 0 0.5rem;
-    
+
     font-size: clamp(0.3rem, 3vw, 0.6rem);
   }
 
@@ -476,35 +530,247 @@ header {
   .projects-text {
     font-size: 1.2rem;
   }
-  
+
   .footer-text {
     font-size: 1rem;
   }
-  
+
   .footer-link {
     font-size: 0.9rem;
   }
-  
+
   .social-buttons {
     gap: 0.5rem;
   }
-  
+
   .social-btn {
     height: 1.5rem;
   }
 
-  .terminal-input { 
+  .terminal-input {
     height: 2rem;
   }
-  .terminal-textarea { 
-    height: 5rem; 
+
+  .terminal-textarea {
+    height: 5rem;
     resize: none;
-  }    
-  
-  .terminal-input, .terminal-textarea {
+  }
+
+  .terminal-input,
+  .terminal-textarea {
     border: 1px solid var(--border-color);
-  }     
-  
-  .email, .discord, .github { width: 30px; }
-  .linkedin { width: 28px; }
+  }
+
+  .email,
+  .discord,
+  .github {
+    width: 30px;
+  }
+
+  .linkedin {
+    width: 28px;
+  }
+
+
+}
+
+/* Styles specific to projects page */
+.projects-container {
+  background-color: rgb(0, 0, 0);
+  border: 4px solid var(--border-color);
+  border-radius: 2px;
+  padding: 2rem;
+  margin: 2rem 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.project-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.project-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-size: 1.8rem;
+  color: var(--font-color);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.project-title::before {
+  content: "> ";
+  color: #ffffff;
+}
+
+.project-description {
+  font-size: 1.4rem;
+  color: var(--footer-text-color);
+  margin-bottom: 1rem;
+  white-space: normal;
+  line-height: 1.4;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.project-screenshot {
+  flex: 0 0 300px;
+  height: 200px;
+  border: 2px solid var(--border-color);
+  overflow: hidden;
+  position: relative;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-screenshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-screenshot:hover img {
+  transform: scale(1.05);
+}
+
+.project-screenshot::before {
+  content: "Screenshot";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 1rem;
+}
+
+.project-details {
+  flex: 1;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  padding: 0.2rem 0.8rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  color: var(--border-color);
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #000000;
+  background-color: rgb(255, 255, 255);
+}
+
+.project-link::before {
+  content: "[";
+}
+
+.project-link::after {
+  content: "]";
+}
+
+/* Scrollbar styling */
+.projects-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+  background: rgba(4, 31, 17, 0.3);
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 2px;
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .project-content {
+    flex-direction: column;
+  }
+
+  .project-screenshot {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-description {
+    font-size: 1.2rem;
+  }
+
+  .tech-tag {
+    font-size: 1rem;
+  }
+
+  .project-link {
+    font-size: 1.1rem;
+  }
+
+  .project-screenshot {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-screenshot {
+    height: 150px;
+  }
 }

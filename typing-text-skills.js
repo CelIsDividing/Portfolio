@@ -39,7 +39,7 @@ const text = `> cat ./skills.txt
 const element = document.getElementById("typing-text");
 let i = 0;
 let typingComplete = false;
-const cursorChar = '<span style="border-left: 10px solid #38c533; margin-left: 2px;"></span>'; // Cursor character
+const cursorChar = '<span style="border-left: 10px solidrgb(255, 255, 255); margin-left: 2px;"></span>'; // Cursor character
 let cursorVisible = true;
 let lineDelay = 0; // Extra delay after line breaks (ms)
 let charDelay = 3;  // Delay between characters (ms)
