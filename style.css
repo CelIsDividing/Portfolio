@@ -71,6 +71,7 @@ header {
   width: 20vw;
   object-fit: contain;
 }
+
 .home-content {
   display: flex;
   align-items: center;
@@ -84,6 +85,14 @@ header {
   max-width: 800px;
   margin: 0 auto;
   max-height: 80vh;
+}
+
+.home-content-inner-skills {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  max-height: 100vh;
 }
 
 /* Background & Text Elements */
@@ -112,6 +121,14 @@ header {
   border-radius: 2px;
   padding: 2rem;
   text-align: center;
+}
+
+.home-text-bg-skills {
+  background-color: rgba(22, 22, 22, 0.627);
+  border: 4px solid var(--border-color);
+  border-radius: 2px;
+  padding: 2rem;
+  text-align: start;
 }
 
 /* Navigation Buttons */
@@ -435,6 +452,24 @@ header {
     }
   }
 
+  .home-text-bg-skills {
+    padding: 1rem;
+    margin: 0 1rem;
+    /* Add some side margin on mobile */
+    width: auto;
+
+    /* Fluid typography */
+    font-size: clamp(0.8rem, 3.5vw, 1rem);
+
+    /* Adjust form elements for mobile */
+    .terminal-input,
+    .terminal-textarea,
+    .terminal-btn {
+      font-size: 0.7rem;
+      width: 100%;
+    }
+  }
+
   .content,
   .home-content {
     padding: 70px 15px;
@@ -449,6 +484,10 @@ header {
     /* or whatever value you prefer */
   }
 
+  .home-content-inner-skills {
+    margin-top: -50px;
+  }
+
   .home-content {
     height: auto;
     min-height: 100vh;
@@ -460,7 +499,8 @@ header {
   }
 
   .terminal-bg,
-  .home-text-bg {
+  .home-text-bg,
+  .home-text-bg-skills {
     padding: 1.5rem;
   }
 
@@ -525,12 +565,20 @@ header {
     margin-top: -80px;
   }
 
-  .home-content-inner {
+  .home-content-inner,
+  .home-content-inner-skills {
     margin-top: -50px;
   }
 
   .home-text-bg {
     padding: 0.75rem;
+    margin: 0 0.5rem;
+
+    font-size: clamp(0.3rem, 3vw, 0.6rem);
+  }
+
+  .home-text-bg-skills {
+    padding: 2rem;
     margin: 0 0.5rem;
 
     font-size: clamp(0.3rem, 3vw, 0.6rem);
@@ -786,5 +834,40 @@ header {
 @media (max-width: 480px) {
   .project-screenshot {
     height: 150px;
+  }
+}
+
+/* Mascot image container - key responsive element */
+.mascot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 120px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.mascot-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .mascot-image {
+    max-width: 150px;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 480px) {
+  .mascot-image {
+    max-width: 120px;
   }
 }

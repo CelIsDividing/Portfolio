@@ -1,40 +1,29 @@
-// typing-animation.js
-const text = `> cat ./skills.txt  
-[+]SKILLSET: [andrej@cellsdividing:~]  
+const text = `
+Some of the core skills I developed over the years:
 
-[!]CORE PROGRAMMING:  
-  ├─ OOP (Python, Java)......▓▓▓▓▓▓▓▓░░░ 82%  
-  ├─ JavaScript/ES6+.........▓▓▓▓▓▓▓▓▓░░ 90%  
-  ├─ HTML5/CSS3..............▓▓▓▓▓▓▓▓▓▓░ 95%  
-  └─ Functional Programming..▓▓▓▓▓▓▓░░░░ 60%  
 
-[!]DESIGN/ART:  
-  ├─ Pixel Art...............▓▓▓▓▓▓▓▓▓░ 88%  
-  ├─ UI/UX Principles........▓▓▓▓▓▓░░░░ 70%  
-  └─ Animation (CSS/JS)......▓▓▓▓▓░░░░░ 58%  
+CORE PROGRAMMING:  
+  ├─ OOP (Python, Java)......▓▓▓▓▓▓▓▓▓▓░ 95%  
+  ├─ JavaScript/ES6+.........▓▓▓▓▓▓▓▓▓░░ 85%  
+  ├─ HTML5/CSS3..............▓▓▓▓▓▓▓░░░░ 60%  
+  └─ Functional Programming..▓▓▓▓▓▓▓▓░░░ 70%  
 
-[!]SYSTEMS:  
+DESIGN/ART:  
+  ├─ Pixel Art...............▓▓▓▓▓▓▓▓▓▓░ 95%  
+  ├─ UI/UX Principles........▓▓▓▓▓▓▓▓░░░ 70%  
+  └─ Animation (CSS/JS)......▓▓▓▓▓░░░░░░ 50%  
+
+SYSTEMS:  
   ├─ Git.....................▓▓▓▓▓▓▓▓░░ 85%  
-  ├─ CLI Wizardry............▓▓▓▓▓▓▓▓▓░ 92%  
-  └─ Browser DevTools........▓▓▓▓▓▓▓▓▓▓ 97%  
+  ├─ CLI Wizardry............▓▓▓▓▓▓▓▓▓░ 90%  
+  └─ Browser DevTools........▓▓▓▓▓▓▓▓▓▓ 99%  
 
-[+]SPECIALTIES:  
-  │  [Clean code alchemist]
-  │  [Responsive design bending]
-  │  [Pixel-perfect CSS rituals] 
-  │  [Vanilla JS optimization]
 
-[-]WARNING: [Skillset dynamically expanding]  
-[-]ADVISORY: [New abilities compile daily]   
-
-> help --navigation
-[+]DIRECTIVES:
-  ├─ nc cellsdividing.net 1337
-  ├─ ls ./projects
-  ├─ ssh collab@cellsdividing.net
-  └─ exit (not recommended)
-
-  root@cellsdividing:~$ █`;
+                                           PROJECTS
+                                             INFO
+                                           CONTACTS
+                                             EXIT 
+`;
 
 const element = document.getElementById("typing-text");
 let i = 0;
@@ -46,10 +35,10 @@ let charDelay = 3;  // Delay between characters (ms)
 
 // Define which lines should be links and their URLs
 const linkLines = {
-    "ls ./projects": "projects.html",
-    "nc cellsdividing.net 1337": "home.html",
-    "ssh collab@cellsdividing.net": "contact.html",
-    "exit (not recommended)": "index.html"
+    "PROJECTS": "projects.html",
+    "INFO": "home.html",
+    "CONTACTS": "contact.html",
+    "EXIT": "index.html"
 };
 
 function processTextWithLinks(displayedText, includeCursor = true) {
@@ -104,26 +93,17 @@ window.onload = function() {
     const style = document.createElement('style');
     style.textContent = `
         .terminal-link {
-            color: #99db48;
+            color: #ff0000ff;
             text-decoration: none;
         }
         .terminal-link:hover {
             color: white;
             text-decoration: none;
         }
-        .terminal-cursor {
-            border-left: 10px solid #38c533;
-            margin-left: 2px;
-            animation: blink 1s step-end infinite;
-        }
         .progress-bar {
             font-size: 0.7em;  /* Adjust this value to make smaller/larger */
             vertical-align: middle; /* Keeps them aligned with text */
             letter-spacing: -0.5px; /* Optional: tightens symbol spacing */
-        }
-        @keyframes blink {
-            from, to { opacity: 1 }
-            50% { opacity: 0 }
         }
     `;
     document.head.appendChild(style);

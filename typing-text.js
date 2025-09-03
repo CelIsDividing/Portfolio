@@ -2,33 +2,37 @@
 const text = `I've been programming for as long as I can remember. 
 
 
-It all started with QBasic and Pascal back in the day, and I've been 
-hooked ever since. Over the years, I've worked with all sorts of 
-languages - Java, JavaScript, C++, Python, SQL - you name it.
+It all started with QBasic and Pascal back in the day, and 
+I've been hooked ever since. Over the years, I've worked 
+with all sorts of languages - Java, JavaScript, C++, 
+Python, SQL - you name it.
 
 
-If you didn't already guess, I specialize in backend development, 
-but I've dipped my fingers in some frontend as well.
+If you didn't already guess, I specialize in backend 
+development, but I've dipped my fingers in some frontend 
+as well.
 
 (like this portfolio page I made)
 
 
-When I'm not coding, I love drawing pixel art and making video games. 
-I've used both GameMaker Studio and Unreal Engine for my projects. 
-There's something really satisfying about building entire worlds 
-from scratch and watching people enjoy what you've created.
+When I'm not coding, I love drawing pixel art and making 
+video games. I've used both GameMaker Studio and Unreal Engine 
+for my projects. There's something really satisfying about 
+building entire worlds from scratch and watching people 
+enjoy what you've created.
 
 (currently working on my second one so far)
 
 
-I'm always keeping myself bussy with something new, whether it's a 
-programming challenge or an art project. I just enjoy the process of 
-making things work and bringing at least some of my ideas to life.
+I'm always keeping myself bussy with something new, whether 
+it's a programming challenge or an art project. I just enjoy 
+the process of making things work and bringing at least some 
+of my ideas to life.
 
 
 PROJECTS
 SKILLS
-CONTACT
+CONTACTS
 EXIT
 `;
 
@@ -44,7 +48,7 @@ let charDelay = 3;  // Delay between characters (ms)
 const linkLines = {
     "PROJECTS": "projects.html",
     "SKILLS": "skills.html",
-    "CONTACT": "contact.html",
+    "CONTACTS": "contact.html",
     "EXIT": "index.html"
 };
 
@@ -113,14 +117,24 @@ function processTextWithLinks(displayedText, includeCursor = true) {
                 '<span class="turquoise-text">SQL</span>');
         }
 
-        if (line.includes("I specialize in backend development")) {
-            lines[j] = lines[j].replace("I specialize in backend development", 
-                '<span class="turquoise-text">I specialize in backend development</span>');
+        if (line.includes("I specialize in backend")) {
+            lines[j] = lines[j].replace("I specialize in backend", 
+                '<span class="turquoise-text">I specialize in backend</span>');
         }
 
-        if (line.includes("I love drawing pixel art and making video games")) {
-            lines[j] = lines[j].replace("I love drawing pixel art and making video games", 
-                '<span class="turquoise-text">I love drawing pixel art and making video games</span>');
+        if (line.includes("development")) {
+            lines[j] = lines[j].replace("development", 
+                '<span class="turquoise-text">development</span>');
+        }
+
+        if (line.includes("I love drawing pixel art and making")) {
+            lines[j] = lines[j].replace("I love drawing pixel art and making", 
+                '<span class="turquoise-text">I love drawing pixel art and making</span>');
+        }
+
+        if (line.includes("video games")) {
+            lines[j] = lines[j].replace("video games", 
+                '<span class="turquoise-text">video games</span>');
         }
 
         if (line.includes("GameMaker Studio")) {
