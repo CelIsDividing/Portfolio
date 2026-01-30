@@ -20,7 +20,7 @@ SYSTEMS:
 
 
                                            PROJECTS
-                                             INFO
+                                            ABOUT
                                            CONTACTS
                                              EXIT 
 `;
@@ -36,7 +36,7 @@ let charDelay = 3;  // Delay between characters (ms)
 // Define which lines should be links and their URLs
 const linkLines = {
     "PROJECTS": "projects.html",
-    "INFO": "home.html",
+    "ABOUT": "home.html",
     "CONTACTS": "contact.html",
     "EXIT": "index.html"
 };
